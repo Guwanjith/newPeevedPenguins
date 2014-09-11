@@ -43,7 +43,7 @@
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     
     //start catapult dragging when a user touches
-    if (CGRectContainsPoint([_catapultArm.boundingBox], touchLocation)) {
+    if (CGRectContainsPoint([_catapultArm boundingBox], touchLocation)) {
         
         //move mouseJoint to the touch location
         _mouseJointNode.position = touchLocation;
