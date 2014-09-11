@@ -13,6 +13,7 @@
     CCPhysicsNode *_physicsNode;
     CCNode *_catapultArm;
     CCNode *_levelNode;
+    CCNode *_contentNode;
 }
 
 // is called when CCB file has completed loading
@@ -21,7 +22,7 @@
     self.userInteractionEnabled = TRUE;
     
     CCScene *level = [CCBReader load:@"Levels/Level1"];
-    [_levelNode addChild:level];
+    [_contentNode addChild:level];
     
 }
 
