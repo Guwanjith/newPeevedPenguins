@@ -22,7 +22,7 @@
     self.userInteractionEnabled = TRUE;
     
     CCScene *level = [CCBReader load:@"Levels/Level1"];
-    [_contentNode addChild:level];
+    [_levelNode addChild:level];
     
 }
 
@@ -48,7 +48,7 @@
     //ensure followed object is in visible area when starting
     self.position = ccp(0, 0);
     CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
-    [self runAction:follow];
+    [_contentNode runAction:follow];
 }
 
 -(void)retry
