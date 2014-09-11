@@ -34,7 +34,6 @@
     // nothing shall collide with our invisible nodes
     _pullbackNode.physicsBody.collisionMask = @[];
     _mouseJointNode.physicsBody.collisionMask = @[];
-    
 }
 
 // called on every touch in this scene
@@ -47,6 +46,7 @@
         
         //move mouseJoint to the touch location
         _mouseJointNode.position = touchLocation;
+        
         
         //setup a spring joint between mouseJointNode and the catapultArm
         _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode.physicsBody
